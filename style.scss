@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+$Bright-Blue: hsl(220, 98%, 61%);
+$Check-Background: hsl(192, 100%, 67%), hsl(280, 87%, 65%);
+
+// Dark Theme
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Bright-Grayish-Blue: hsl(236, 33%, 92%);
+$Grayish-Blue: hsl(234, 11%, 52%);
+$Dark-Grayish-Blue: hsl(233, 14%, 35%);
+$Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+
+// Light Theme
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+$Light-Grayish-Blue: hsl(233, 11%, 84%);
+$Dark-Grayish-Blue: hsl(236, 9%, 61%);
+$Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+body {
+  min-height: 100vh;
+}
+
+.top {
+  position: relative;
+  height: 20vh;
+  padding: 40px 0 0 0;
+  background: url(images/bg-mobile-dark.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .top--content {
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+    .title {
+      letter-spacing: 5px;
+      font-size: 28px;
+      color: $Bright-Grayish-Blue;
+    }
+    .switch {
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+      background: url(images/icon-sun.svg);
+      background-size: cover;
+      background-position: center;
+    }
+    .switch--light {
+      background: url(images/icon-moon.svg);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+.top--light {
+  background: url(images/bg-mobile-light.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.main--content {
+  height: 80vh;
+  background-color: $Very-Dark-Blue;
+  position: relative;
+  .todo {
+    position: relative;
+    left: 50%;
+    top: -100px;
+    transform: translate(-50%);
+    width: 325px;
+    display: flex;
+    flex-wrap: wrap;
+    .create {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      background-color: $Very-Dark-Desaturated-Blue;
+      margin-bottom: 20px;
+      .add {
+        width: 23px;
+        height: 23px;
+        border: 1px solid $Very-Dark-Grayish-Blue;
+        border-radius: 100%;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: $Light-Grayish-Blue;
+      }
+    }
+    .create--light {
+      background-color: $Very-Light-Gray;
+    }
+
+    .task--container {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      overflow: hidden;
+      width: 100%;
+      .task {
+        padding: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $Very-Dark-Desaturated-Blue;
+        .mark {
+          width: 23px;
+          height: 23px;
+          border: 1px solid $Very-Dark-Grayish-Blue;
+          border-radius: 100%;
+          margin-right: 10px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .done {
+          background: linear-gradient(
+            120deg,
+            hsl(192, 100%, 67%),
+            hsl(280, 87%, 65%)
+          );
+        }
+        .task--content {
+          color: $Light-Grayish-Blue;
+          margin-right: auto;
+          max-width: 225px;
+          font-size: 14px;
+        }
+        .strikethrough {
+          text-decoration: line-through;
+          color: $Dark-Grayish-Blue;
+        }
+        .task--close {
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+        .task--content--light {
+          color: $Very-Dark-Grayish-Blue;
+        }
+      }
+      .hidden {
+        display: none;
+      }
+      .task--light {
+        background-color: $Very-Light-Gray;
+        .task--content {
+          color: $Very-Dark-Grayish-Blue;
+        }
+      }
+    }
+
+    .todo--bottom {
+      width: 100%;
+      .counter--continer {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: flex;
+        background-color: $Very-Dark-Desaturated-Blue;
+        justify-content: space-between;
+        .left,
+        .clear {
+          font-size: 14px;
+          font-weight: 400;
+          color: $Very-Dark-Grayish-Blue;
+        }
+        .clear {
+          cursor: pointer;
+        }
+      }
+      .counter--continer--light {
+        background-color: $Very-Light-Gray;
+      }
+
+      .options {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        border-radius: 5px;
+        background-color: $Very-Dark-Desaturated-Blue;
+        justify-content: center;
+        .option--button {
+          color: $Grayish-Blue;
+          font-weight: 700;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+        .option--button:nth-child(3) {
+          margin-right: 0;
+        }
+        .choosen--option {
+          color: hsl(219, 61%, 54%);
+        }
+      }
+      .options--light {
+        background-color: $Very-Light-Gray;
+      }
+    }
+
+    .drag {
+      position: absolute;
+      bottom: -70px;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 14px;
+      width: 200px;
+      color: $Very-Dark-Grayish-Blue;
+    }
+  }
+}
+.main--content--light {
+  background-color: $Very-Light-Grayish-Blue;
+}
+
+@media (min-width: 880px) {
+  .top {
+    .top--content {
+      width: 550px;
+    }
+  }
+
+  .main--content {
+    .todo {
+      width: 550px;
+      .todo--bottom {
+        width: 100%;
+        display: flex;
+        position: relative;
+        .counter--continer {
+          width: 100%;
+          margin-bottom: 0;
+          border-radius: 0;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          .clear:hover {
+            color: $Light-Grayish-Blue;
+          }
+        }
+        .options {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          width: 50%;
+          border-radius: 0px;
+          border-bottom-right-radius: 5px;
+          background-color: transparent;
+          .option--button:hover {
+            color: $Light-Grayish-Blue;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <section class="top">
+      <div class="top--content">
+        <h1 class="title">TODO</h1>
+        <div class="switch"></div>
+      </div>
+    </section>
+
+    <section class="main--content">
+      <div class="todo">
+        <div class="create">
+          <div class="add"></div>
+          <input type="text" placeholder="Create a new todo..." />
+        </div>
+
+        <div class="task--container">
+          
+            <div class="task checked" draggable="true">
+              <div class="mark done">
+                <img src="images/icon-check.svg" alt="Completed">
+              </div>
+              <p class="task--content strikethrough">Complete online JavaScript course</p>
+              <img src="images/icon-cross.svg" alt="Close" class="task--close">
+            </div>
+            <div class="task to--do" draggable="true">
+              <div class="mark">
+              </div>
+              <p class="task--content">Jag around the park 3x</p>
+              <img src="images/icon-cross.svg" alt="Close" class="task--close">
+            </div>
+            <div class="task to--do" draggable="true">
+              <div class="mark">
+              </div>
+              <p class="task--content">10 minutes meditation</p>
+              <img src="images/icon-cross.svg" alt="Close" class="task--close">
+            </div>
+            <div class="task to--do" draggable="true">
+              <div class="mark">
+              </div>
+              <p class="task--content">Read for 1 hour</p>
+              <img src="images/icon-cross.svg" alt="Close" class="task--close">
+            </div>
+            <div class="task to--do" draggable="true">
+              <div class="mark">
+              </div>
+              <p class="task--content">Pick up groceries</p>
+              <img src="images/icon-cross.svg" alt="Close" class="task--close">
+            </div>
+            <div class="task to--do" draggable="true">
+              <div class="mark">
+              </div>
+              <p class="task--content">Complete ToDo app on Frontend Mentor</p>
+              <img src="images/icon-cross.svg" alt="Close" class="task--close">
+            </div>
+          
+        </div>
+        
+        <div class="todo--bottom">
+          <div class="counter--continer">
+            <h5 class="left"><a class="counter">5</a> items left</h3>
+            <h5 class="clear">Clear Completed</h5>
+          </div>
+
+          <div class="options">
+            <p class="all option--button choosen--option">All</p>
+            <p class="active option--button">Active</p>
+            <p class="completed option--button">Completed</p>
+          </div>
+        </div>
+        <h1 class="drag">Drag and drop to reorder list</h1>
+      </div>
+
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
